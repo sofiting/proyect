@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultGif">
+
+    <ImageView
+        android:id="@+id/gif"
+        android:layout_width="412dp"
+        android:layout_height="353dp"
+        android:layout_marginBottom="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/happy" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="303dp"
+        android:layout_height="64dp"
+        android:fontFamily="@font/baloo"
+        android:text="You Win ⸜(｡˃ ᵕ ˂ )⸝♡"
+        android:textColor="#7F67AA"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/gif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <Button
+        android:id="@+id/ppAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B89D9D"
+        android:fontFamily="@font/baloo"
+        android:text="Play again"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <Button
+        android:id="@+id/ppFinish"
+        android:layout_width="162dp"
+        android:layout_height="54dp"
+        android:background="#AA8A8A"
+        android:fontFamily="@font/baloo"
+        android:text="Finish"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toEndOf="@+id/ppAgain"
+        app:layout_constraintTop_toBottomOf="@+id/gif"
+        app:layout_constraintVertical_bias="0.388" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

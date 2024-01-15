@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBE4F8"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="415dp"
+        android:layout_height="379dp"
+        android:background="#ECE4FB"
+        android:src="@drawable/r2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/btPvC"
+        android:layout_width="267dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/baloo"
+        android:text="Player  VS  Computer"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <Button
+        android:id="@+id/btPvP"
+        android:layout_width="265dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/baloo"
+        android:text="Player  VS  Player"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPvC"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="179dp"
+        android:layout_height="32dp"
+        android:soundEffectsEnabled="false"
+        android:text="see the instructions"
+        android:textAlignment="center"
+        android:textColor="#595858"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPvP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

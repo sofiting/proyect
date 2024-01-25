@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.marioContenedor {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.mario {
+  margin-top: 52px;
+  height: 859px;
+  width: 100%;
+  display: block;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  right: -17%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 60px 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+form p {
+  margin-top: 50px;
+}
+label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input {
+  padding: 8px;
+  box-sizing: border-box;
+  border: 5px solid rgb(246, 228, 208);
+  border-radius: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+button {
+  grid-column: span 2;
+  background-color: rgb(249, 199, 105);
+  color: white;
+  padding: 15px 12px 15px 13px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 77px;
+  margin-left: 63%;
+  font-size: large;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+button:hover {
+  grid-column: span 2;
+  background-color: rgb(249, 199, 105);
+  color: white;
+  padding: 15px 12px 15px 13px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 77px;
+  margin-left: 63%;
+  font-size: 20px;
+}
+.log {
+  text-decoration: underline;
+  padding-left: 15px;
+  font-weight: bolder;
+  color: black;
+}
+
+.log:visited {
+  color: rgb(246, 178, 127);
+}
+
+.log:visited:after {
+  content: " (Visitado)";
+  color: rgb(246, 178, 127);
+}

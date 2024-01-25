@@ -1,0 +1,54 @@
+body {
+  background-color: antiquewhite;
+}
+
+.juego img {
+  cursor: pointer;
+}
+.descrip {
+  border-radius: 30px;
+  border: 5px dashed rgb(233, 147, 147);
+}
+.juego .descrip {
+  display: none;
+}
+.fila {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fila img {
+  height: 250px;
+  width: 400px;
+  padding: 20px 8px 0px 10px;
+  margin: 30px 8px 0px 10px;
+  border-radius: 40px;
+}
+
+.juego {
+  margin: 50px;
+}
+
+.fila h3,
+.fila p {
+  margin: 5px 30px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+.fila p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fila i {
+  background-color: #f6b951;
+  color: #080808;
+  border-radius: 16%;
+  padding: 5px;
+  margin-left: 15px;
+  width: 59px;
+}

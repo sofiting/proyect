@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="sofia_ting" />
+    <title>Retro Market</title>
+
+    <link rel="stylesheet" href="../General/General.css" />
+    <link rel="stylesheet" href="Entrada.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="../imagenes/imagenes/logo/logo.png" alt="logo" class="logo" />
+      <h1>Retro Market</h1>
+      <div class="otro">
+        <a href="../Compra/Compra.html" style="color: black" class="carrito"
+          ><i class="bi bi-cart4"></i>
+        </a>
+        <div class="cantidad_producto"><span id="cantidad"></span></div>
+        <a href="../Login/Login.html" style="color: black" class="cuenta"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul>
+        <li>
+          <i class="bi bi-fire"><a href="#top_juego"> Top juegos </a></i>
+        </li>
+        <li>
+          <i class="bi bi-boxes"><a href="#novedades">Novedades</a></i>
+        </li>
+        <li>
+          <i class="bi bi-columns-gap"><a href="#categoria">Categoría</a></i>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="../imagenes/imagenes/portadas/p3.jpg" alt="Imagen 1" />
+          </div>
+          <div class="item">
+            <img src="../imagenes/imagenes/portadas/p6.png" alt="Imagen 2" />
+          </div>
+          <div class="item">
+            <img src="../imagenes/imagenes/portadas/p4.png" alt="Imagen 3" />
+          </div>
+          <div class="item">
+            <img src="../imagenes/imagenes/portadas/p5.jpg" alt="Imagen 4" />
+          </div>
+          <div class="item">
+            <img src="../imagenes/imagenes/portadas/p7.jpg" alt="Imagen 5" />
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev">&lt;</button>
+          <button id="next">&gt;</button>
+        </div>
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <section id="top_juego">
+        <h2>Top juegos</h2>
+        <div class="top" id="goodID">
+          <!--
+         <div class="juego">
+            <img src="../imagenes/imagenes/top/t1.jpg" alt="image 1" />
+            <h3>Golden Axe</h3>
+            <p>
+              Precio: 10.24 €<i class="bi bi-cart4" onclick="addCart()"></i>
+            </p>
+          </div>
+          <div class="juego">
+            <img src="../imagenes/imagenes/top/t2.jpg" alt="image 2" />
+            <h3>Sonic &amp; Knuckles</h3>
+            <p>
+              Precio: 9.41 € <i class="bi bi-cart4" onclick="addCart()"></i>
+            </p>
+          </div>
+          <div class="juego">
+            <img src="../imagenes/imagenes/top/t3.jpg" alt="image 3" />
+            <h3>Flappy Bird</h3>
+            <p>
+              Precio: 8.67 € <i class="bi bi-cart4" onclick="addCart()"></i>
+            </p>
+          </div>
+        --></div>
+      </section>
+
+      <section id="novedades">
+        <h2>Novedades</h2>
+        <div class="nov">
+          <div class="titulo">Sonic &amp; Knuckles</div>
+          <div class="sonic">
+            <img src="../imagenes/imagenes/juegos retro/r6.png" alt="sonic" />
+            <p>
+              La gigantesca fortaleza de Eggman (llamado Dr. Robotnik fuera de
+              Japón antes de Sonic Adventure), el Death Egg, iba a escapar hacia
+              el espacio; pero Sonic hizo que volviera a caer y se estrelló de
+              nuevo contra la isla flotante. Tras escapar de la estación
+              espacial en rumbo de colisión, el erizo cayó en un denso bosque de
+              dicha isla, en el que enormes champiñones crecen exuberantemente.
+              El Death Egg cayó sobre un colosal volcán. Sonic se sintió
+              bastante molesto al darse cuenta de que la estación espacial había
+              vuelto a sobrevivir, y no se sentiría tranquilo hasta que esta
+              fuera completamente destruida. El erizo se dio cuenta de que el
+              Eggman no había terminado de reparar el Death Egg apropiadamente
+              cuando intentó lanzarlo al espacio para que Sonic no lo
+              destruyera, y eso causó que volviera a caer hacia la isla. Justo
+              luego de que Sonic llegó a esta conclusión, Knuckles salió por una
+              puerta oculta detrás de un matorral, y miró en todas direcciones
+              muy cuidadosamente.
+            </p>
+          </div>
+          <div class="kuckles">
+            <p>
+              El erizo se ocultó para no ser visto; Knuckles cerró la puerta y
+              se adentró en el bosque. Cuando el equidna desapareció, Sonic
+              entró por la puerta oculta. Terminó en una pequeña habitación y
+              quedó deslumbrado por una brillante luz. Esta luz venía de un
+              resplandeciente anillo gigante. Sonic no podía quitarle los ojos
+              de encima a ese anillo luminoso. Creía que era maravilloso, pero
+              cuando lo tocó con su mano, oyó un estridente y agudo sonido y
+              comenzó a viajar a través de las dimensiones. Cuando Sonic llegó
+              al otro lado, se encontró en una gran habitación que jamás había
+              visto antes. Le pareció extraño que el inmenso altar del centro de
+              la habitación no tuviera nada de polvo encima. Cuando miró con más
+              detalle la parte superior del altar, se llevó una gran sorpresa.
+              En el centro del altar yacía la "Esmeralda Maestra", la más grande
+              y poderosa de las esmeraldas caos.
+            </p>
+            <img src="../imagenes/imagenes/juegos retro/r5.png" alt="kuckles" />
+          </div>
+        </div>
+      </section>
+
+      <section id="categoria">
+        <h2>Categoría</h2>
+        <div class="cate">
+          <a href="../Categoria/Moderno/Moderno.html">
+            <div class="imgs">
+              <img
+                src="../imagenes/imagenes/juegos modernos//m5.jpg"
+                alt="m5"
+              />
+              <p>MODERNO</p>
+            </div>
+          </a>
+          <a href="../Categoria/Novedad/Novedad.html">
+            <div class="imgs">
+              <img src="../imagenes/imagenes/juegos novedad/n4.jpg" alt="n4" />
+              <p>NOVEDAD</p>
+            </div>
+          </a>
+          <a href="../Categoria/Retro/Retro.html">
+            <div class="imgs">
+              <img src="../imagenes/imagenes/juegos retro/r7.jpg" alt="r7" />
+              <p>RETRO</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../imagenes/imagenes/logo/logo.png" alt="Tu Logo" />
+            <p class="compania">Retro Market</p>
+          </div>
+          <div class="footer-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle sol 23</p>
+            <p>Email: retromarket@gmail.com</p>
+            <p>Teléfono: +34 623 789 123</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/productos">Productos</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul>
+              <li>
+                <a href="https://es-es.facebook.com/" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/en/" target="_blank">Tiktok</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2024 Retro Market Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-Xc8k1Qo8zfuJzjw5r4v0TJR7A6b8ukT0R1TzXaU8otFeDAt8ndxaT2pZtlIYYuu4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Entrada.js"></script>
+    <script src="../General/General.js"></script>
+    <script>
+      initPage("#goodID");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="sofia_ting" />
+    <title>Retro Market</title>
+
+    <link rel="stylesheet" href="../../General/General.css" />
+    <link rel="stylesheet" href="../Categoria.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="../../imagenes/imagenes/logo/logo.png"
+        alt="logo"
+        class="logo"
+      />
+      <h1>Retro Market</h1>
+      <div class="otro">
+        <a href="../../Compra/Compra.html" style="color: black" class="carrito"
+          ><i class="bi bi-cart4"></i
+        ></a>
+        <a href=".././Login/Login.html" style="color: black" class="cuenta"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul class="ul">
+        <li>
+          <i class="bi bi-fire"
+            ><a href="../../MainPage/Entrada.html#top_juego"> Top juegos </a></i
+          >
+        </li>
+        <li>
+          <i class="bi bi-boxes"
+            ><a href="../../MainPage/Entrada.html#novedades">Novedades</a></i
+          >
+        </li>
+        <li>
+          <i class="bi bi-columns-gap"
+            ><a href="../../MainPage/Entrada.html#categoria">Categoría</a></i
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2 class="h2">Retro</h2>
+      <section>
+        <div class="fila" id="goods_list_view1">
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img src="../../imagenes/imagenes/juegos retro/r7.jpg" alt="img1" />
+            <h3>Super Mario - All stars</h3>
+            <p>Precio: 7.99 € <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              Super Mario 3D All-Starsa​ es una recopilación de juegos de
+              plataformas de 2020 para Nintendo Switch. Conmemora el 35
+              aniversario de la franquicia Super Mario de Nintendo, con ports de
+              alta definición de Super Mario 64 (1996), Super Mario Sunshine
+              (2002) y Super Mario Galaxy (2007).
+            </p>
+          </div>
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img src="../../imagenes/imagenes/juegos retro/r2.jpg" alt="img2" />
+            <h3>Pokémon</h3>
+            <p>Precio: 10.99 € <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              Los juegos Pokémon donde los jugadores capturan, entrenan y luchan
+              con criaturas llamadas Pokémon. El objetivo es ganar batallas,
+              obtener insignias y completar la Pokédex. La serie ha sido popular
+              desde los años 90 y ha tenido un gran impacto en la cultura
+              popular.
+            </p>
+          </div>
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img src="../../imagenes/imagenes/juegos retro/r3.jpg" alt="img3" />
+            <h3>Super Metroid</h3>
+            <p>Precio: 11.51 € <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              Super Metroid es un juego de acción y aventuras de desplazamiento
+              lateral en 2D, que tiene lugar principalmente en el planeta
+              ficticio Zebes del juego original: un mundo grande y abierto con
+              áreas conectadas por puertas y ascensores.
+            </p>
+          </div>
+        </div>
+
+        <div class="fila" id="goods_list_view2">
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img src="../../imagenes/imagenes/juegos retro/r8.jpg" alt="img4" />
+            <h3>Gold Runner</h3>
+            <p>Precio: 14.61€ <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              ¡Juego retro Gold Runner! ¿Te gustan los juegos retro? ¡Te
+              encantará este juego similar a Lode Runner de juegos arcade muy
+              antiguos! ¡Compra para tener este juego arcade con 37 niveles en
+              total!
+            </p>
+          </div>
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img src="../../imagenes/imagenes/juegos retro/r9.jpg" alt="img5" />
+            <h3>Batallas de torres</h3>
+            <p>Precio: 23.32€ <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              Lleve a sus guerreros y guardianes para defender su castillo,
+              mazmorras y torres de los ennemies de pícaros. Retro Defenders:
+              Towers War es un juego épico y clásico de RPG con estilo gráfico
+              de Pixel Arts. Todo lo que tienes que hacer es usar tus tropas
+              para derrotar a los pícaros y salvar las mazmorras.
+            </p>
+          </div>
+          <div
+            class="juego"
+            onmouseover="mostrarDescripcion(this)"
+            onmouseout="ocultarDescripcion(this)"
+          >
+            <img
+              src="../../imagenes/imagenes/juegos retro/r10.jpg"
+              alt="img6"
+            />
+            <h3>Cuartel de tanques</h3>
+            <p>Precio: 19.21€ <i class="bi bi-cart4"></i></p>
+            <p class="descrip">
+              Hay 12 niveles que puedes superar en modo fácil o difícil. Juego
+              simple en el que solo necesitas seleccionar tu modo y tocar para
+              disparar al objetivo más cercano, por ejemplo, torreta y tanques
+              enemigos entrantes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../../imagenes/imagenes/logo/logo.png" alt="Tu Logo" />
+            <p class="compania">Retro Market</p>
+          </div>
+          <div class="footer-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle sol 23</p>
+            <p>Email: retromarket@gmail.com</p>
+            <p>Teléfono: +34 623 789 123</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/productos">Productos</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul>
+              <li>
+                <a href="https://es-es.facebook.com/" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/en/" target="_blank">Tiktok</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2024 Retro Market Web. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../Categoria.js"></script>
+    <script src="../../General/General.js"></script>
+    <script>
+      let goods_list = [];
+
+      // 初始化页面
+      fetch("../../data/juegos.json").then(
+        (res) => {
+          res.json().then((resul) => {
+            goods_list = resul.lista_juego;
+            // 渲染页面
+            let html1 = "";
+            let html2 = "";
+            goods_list.forEach((item) => {
+              if (item.type === 6) {
+                html1 += `<div
+                class="juego"
+                id="goods_item"
+                onmouseover="mostrarDescripcion(this)"
+                onmouseout="ocultarDescripcion(this)"
+                data-id="${item.id}"
+              >
+                <img
+                  src="${item.image}"
+                  alt="img2"
+                />
+                <h3>${item.title}</h3>
+                <p>Precio: ${item.price} € <i class="bi bi-cart4"></i></p>
+                <p class="descrip">${item.text}</p>
+              </div>`;
+              }
+              if (item.type === 7) {
+                html2 += `<div
+                class="juego"
+                id="goods_item"
+                data-id="${item.id}"
+              >
+                <img
+                  src="${item.image}"
+                  alt="img2"
+                />
+                <h3>${item.title}</h3>
+                <p>Precio: ${item.price} € <i class="bi bi-cart4"></i></p>
+                <p class="descrip">${item.text}</p>
+              </div>`;
+              }
+            });
+            document.querySelector("#goods_list_view1").innerHTML = html1;
+            document.querySelector("#goods_list_view2").innerHTML = html2;
+            // 为页面绑定事件
+            const goods_list_child_view =
+              document.querySelectorAll("#goods_item");
+            for (let i = 0; i < goods_list_child_view.length; i++) {
+              const dom_item = goods_list_child_view[i];
+              const goods_id = dom_item.getAttribute("data-id"); //当前点击商品的ID
+              const goods_item = goods_list.find(
+                (item) => item.id === parseInt(goods_id)
+              ); // 通过ID把对呀商品数据取出来
+
+              dom_item.addEventListener("mouseover", () =>
+                mostrarDescripcion(dom_item)
+              );
+              dom_item.addEventListener("mouseout", () =>
+                ocultarDescripcion(dom_item)
+              );
+              dom_item
+                .querySelector(".bi-cart4")
+                .addEventListener("click", () => onAddCart(goods_item));
+            }
+          });
+        },
+        (err) => err
+      );
+    </script>
+  </body>
+</html>

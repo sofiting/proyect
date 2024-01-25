@@ -1,0 +1,171 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(237, 225, 204);
+  width: 100%;
+  margin: -20px 0px;
+  font-family: "Bungee Inline", sans-serif;
+  font-family: "Bungee Shade", sans-serif;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 40px;
+  padding: 12px;
+}
+
+.logo {
+  margin-top: 34px;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  z-index: 1000;
+  height: 20px;
+}
+
+.nav ul {
+  display: flex;
+  background-color: rgb(249, 199, 105);
+}
+.nav li {
+  list-style-type: none;
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 23px;
+  margin: 10px 150px;
+  text-align: center;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 4px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.nav li a:hover {
+  text-decoration: none;
+  color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav li i {
+  color: aliceblue;
+}
+
+.otro {
+  position: relative;
+  top: -5px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.otro i {
+  font-size: 34px;
+  padding: 5px;
+}
+
+.carrito {
+  position: absolute;
+  right: -500px;
+  top: 30px;
+}
+.cuenta {
+  position: absolute;
+  right: -590px;
+  top: 33px;
+}
+
+h2 {
+  background-color: rgb(246, 211, 182);
+  border: 10px solid rgb(249, 199, 105);
+  padding: 10px;
+  margin: 80px 0 0 0;
+  font-size: 27px;
+  font-family: "Bungee Shade", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.footer {
+  background-color: #8d4545;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-info p {
+  padding: 10px;
+  margin: 10px;
+  width: 269px;
+}
+.footer-info h3,
+.footer-links h3,
+.footer-social h3 {
+  border-bottom: 1px solid #fff;
+}
+
+.footer-links ul,
+.footer-social ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  text-decoration: underline;
+}
+.compania {
+  font-family: "Bungee Inline", sans-serif;
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}

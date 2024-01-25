@@ -1,0 +1,75 @@
+body {
+  background-color: antiquewhite;
+}
+
+.contenedor {
+  padding: 100px;
+}
+.juego_seleccionado {
+  background-color: rgb(255, 251, 246, 0.8);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 30px 30px 30px 130px;
+  font-size: 25px;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 5px;
+}
+
+input[type="number"] {
+  width: 70px;
+  height: 40px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.juego_seleccionado img {
+  width: 280px;
+  height: 180px;
+  border-radius: 20px;
+  margin-left: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+.info_juego {
+  display: flex;
+  justify-content: center;
+}
+
+.info_juego p {
+  margin: 0px 100px;
+}
+
+.goods_count {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgb(255, 251, 246, 0.8);
+  backdrop-filter: blur(8px);
+}
+.goods_count .goods_price {
+  display: flex;
+  align-items: center;
+}
+.goods_count .item {
+  margin-right: 30px;
+}
+.goods_count button {
+  width: 120px;
+  height: 40px;
+  border-width: 0;
+  background-color: #f6b951;
+  color: #fff;
+  border-radius: 6px;
+}
+.juego_seleccionado {
+  margin-bottom: 20px;
+}

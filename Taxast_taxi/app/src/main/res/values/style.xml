@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/babyblue</item>
+        <item name="colorPrimaryDark">@color/babyblue</item>
+        <item name="colorAccent">@color/babyblue</item>
+        <item name="android:textColorPrimary">@color/babyblue</item>
+        <item name="android:datePickerDialogTheme">@style/MyDatePickerDialogStyle</item>
+    </style>
+
+    <style name="MyDatePickerDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:datePickerMode">calendar</item>
+    </style>
+
+
+</resources>

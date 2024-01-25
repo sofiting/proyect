@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Taxast" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/babyblue</item>
+        <item name="android:statusBarColor">@color/babyblue</item>
+        <item name="android:navigationBarColor">@color/babyblue</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.Taxast_taxi" parent="Base.Theme.Taxast" />
+</resources>

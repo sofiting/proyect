@@ -3,6 +3,9 @@ package com.example.taxast_taxi.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.MenuItem
 import com.example.taxast_taxi.R
 import com.example.taxast_taxi.account.Account
@@ -30,6 +33,23 @@ class SuccessPayment : AppCompatActivity() {
         }
 
         setupBottomNavigationView()
+
+        val name = intent.getStringExtra("name");
+        val dni = intent.getStringExtra("dni")
+        Log.d("final",name.toString())
+        Log.d("final",dni.toString())
+
+
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, Home::class.java)
+            intent.putExtra("name", name)
+            intent.putExtra("dni", dni)
+            startActivity(intent)
+            finish()
+        }, 2000)
+
+
     }
     // Manejar las selecciones del menú
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -52,7 +72,7 @@ class SuccessPayment : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
-                    // You are already in the Home activity, so no need to navigate
+                   // startActivity(Intent(this, Home::class.java))
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.history -> {

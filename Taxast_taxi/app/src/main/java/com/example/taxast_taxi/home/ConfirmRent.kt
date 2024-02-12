@@ -20,6 +20,8 @@ class ConfirmRent : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         val rent = intent.getParcelableExtra<RentActivity>("rent")
+        val name = intent.getStringExtra("name")
+        val dni = intent.getStringExtra("dni")
 
         if (rent != null) {
             binding.nameR.text = rent.name
@@ -28,11 +30,13 @@ class ConfirmRent : AppCompatActivity() {
             binding.dateR.text = rent.selectDate
             binding.timeR.text = rent.pickTimeRent
             binding.returnR.text = rent.returnDate
-            binding.payR.text = rent.age
+            binding.payR.text = rent.age+ " Euros"
 
 
             binding.confirmPayR.setOnClickListener {
                 val intent = Intent(this, SuccessPayment::class.java)
+                intent.putExtra("name", name)
+                intent.putExtra("dni", dni)
                 startActivity(intent)
             }
         }

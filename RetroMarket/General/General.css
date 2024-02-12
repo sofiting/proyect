@@ -83,10 +83,16 @@ body {
 
 .carrito {
   position: absolute;
-  right: -500px;
+  right: -400px;
   top: 30px;
 }
 .cuenta {
+  position: absolute;
+  right: -490px;
+  top: 33px;
+}
+
+.almacen {
   position: absolute;
   right: -590px;
   top: 33px;

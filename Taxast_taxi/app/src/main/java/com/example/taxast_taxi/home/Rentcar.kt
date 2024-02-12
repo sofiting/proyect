@@ -5,6 +5,7 @@ import android.app.TimePickerDialog
 import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -46,26 +47,44 @@ class Rentcar : AppCompatActivity() {
 
         val name = intent.getStringExtra("name")
         val dni = intent.getStringExtra("dni")
+        Log.d("sofia", name.toString())
+        Log.d("sofia", dni.toString())
 
         setupDateTimePickers()
         radioPrice()
+
         if (name != null && dni != null) {
 
-                submitOption(name, dni)
+            submitOption(name.toString(), dni.toString())
 
         }
+
     }
 
     private fun submitOption(name: String, dni: String) {
         binding.submit.setOnClickListener {
             if (checkNotEmptyR() && isReturnDateValid(returnDate)) {
-                val rent = RentActivity(name, dni, binding.picklocation.text.toString(), selectedDate, pickTime, returnDate, agePrice)
+                Log.d("sofia", "entra dos check")
+                val rent = RentActivity(
+                    name,
+                    dni,
+                    binding.picklocation.text.toString(),
+                    selectedDate,
+                    pickTime,
+                    returnDate,
+                    agePrice
+                )
                 val intent = Intent(this, ConfirmRent::class.java)
                 intent.putExtra("rent", rent)
+                intent.putExtra("name", name)
+                intent.putExtra("dni", dni)
                 startActivity(intent)
             } else {
                 // Display an error message when the return date is invalid
-                Utils.showToast(this, "Invalid return date. Please make sure it's not earlier than the pick-up date.")
+                Utils.showToast(
+                    this,
+                    "Invalid return date. Please make sure it's not earlier than the pick-up date."
+                )
             }
         }
     }
@@ -80,9 +99,9 @@ class Rentcar : AppCompatActivity() {
         val ptime = binding.ptime.text.toString()
 
         if (location.isEmpty() || sDate.isEmpty() || rDate.isEmpty() || ptime.isEmpty()) {
-            Utils.showToast(this,"Please complete all required fields.")
+            Utils.showToast(this, "Please complete all required fields.")
         } else if (!binding.g1.isChecked && !binding.g2.isChecked && !binding.g3.isChecked) {
-            Utils.showToast(this,"Please select a radio button.")
+            Utils.showToast(this, "Please select a radio button.")
         } else {
             valid = true
         }
@@ -113,28 +132,32 @@ class Rentcar : AppCompatActivity() {
     private fun setupDateTimePickers() {
         val calendar = Calendar.getInstance()
         val currentTime = Calendar.getInstance().apply { add(Calendar.MINUTE, 30) }
-        val pickDatePickerDialog = createDatePickerDialog(calendar) { selectedYear, selectedMonth, selectedDay ->
-            selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-            binding.pdate.setText(selectedDate)
-        }
-
-        val returnDatePickerDialog = createDatePickerDialog(calendar) { selectedYear, selectedMonth, selectedDay ->
-            val returnDateText = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-            if (isReturnDateValid(returnDateText)) {
-                returnDate = returnDateText
-                binding.returnDateR.setText(returnDate)
-            } else {
-                Utils.showToast(this,"Return date cannot be earlier than pick-up date")
+        val pickDatePickerDialog =
+            createDatePickerDialog(calendar) { selectedYear, selectedMonth, selectedDay ->
+                selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                binding.pdate.setText(selectedDate)
             }
-        }
 
-        val pickTimePickerDialog = createTimePickerDialog(currentTime) { selectedHour, selectedMinute ->
-            handleTimeSelection(binding.ptime, selectedHour, selectedMinute)
-        }
+        val returnDatePickerDialog =
+            createDatePickerDialog(calendar) { selectedYear, selectedMonth, selectedDay ->
+                val returnDateText = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                if (isReturnDateValid(returnDateText)) {
+                    returnDate = returnDateText
+                    binding.returnDateR.setText(returnDate)
+                } else {
+                    Utils.showToast(this, "Return date cannot be earlier than pick-up date")
+                }
+            }
 
-        val returnTimePickerDialog = createTimePickerDialog(currentTime) { selectedHour, selectedMinute ->
-            handleTimeSelection(binding.returnDateR, selectedHour, selectedMinute)
-        }
+        val pickTimePickerDialog =
+            createTimePickerDialog(currentTime) { selectedHour, selectedMinute ->
+                handleTimeSelection(binding.ptime, selectedHour, selectedMinute)
+            }
+
+        val returnTimePickerDialog =
+            createTimePickerDialog(currentTime) { selectedHour, selectedMinute ->
+                handleTimeSelection(binding.returnDateR, selectedHour, selectedMinute)
+            }
 
         binding.pdate.setOnClickListener {
             pickDatePickerDialog.show()
@@ -164,7 +187,10 @@ class Rentcar : AppCompatActivity() {
         }
     }
 
-    private fun createDatePickerDialog(calendar: Calendar, onDateSetListener: (Int, Int, Int) -> Unit): DatePickerDialog {
+    private fun createDatePickerDialog(
+        calendar: Calendar,
+        onDateSetListener: (Int, Int, Int) -> Unit
+    ): DatePickerDialog {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
@@ -183,7 +209,10 @@ class Rentcar : AppCompatActivity() {
         return datePickerDialog
     }
 
-    private fun createTimePickerDialog(currentTime: Calendar, onTimeSetListener: (Int, Int) -> Unit): TimePickerDialog {
+    private fun createTimePickerDialog(
+        currentTime: Calendar,
+        onTimeSetListener: (Int, Int) -> Unit
+    ): TimePickerDialog {
         val hour = currentTime.get(Calendar.HOUR_OF_DAY)
         val minute = currentTime.get(Calendar.MINUTE)
 
@@ -213,7 +242,7 @@ class Rentcar : AppCompatActivity() {
         textView.text = pickTime
 
         if (selectedDate == returnDate) {
-            Utils.showToast(this,"Return time cannot be earlier than pick-up time")
+            Utils.showToast(this, "Return time cannot be earlier than pick-up time")
         }
     }
 
@@ -224,14 +253,17 @@ class Rentcar : AppCompatActivity() {
                 startActivity(Intent(this, Favourite::class.java))
                 return true
             }
+
             R.id.action_settings -> {
                 startActivity(Intent(this, Setting::class.java))
 
                 return true
             }
+
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
     private fun setupBottomNavigationView() {
         val bottomNavigationView = binding.menu1
 
@@ -241,16 +273,19 @@ class Rentcar : AppCompatActivity() {
                     // You are already in the Home activity, so no need to navigate
                     return@setOnNavigationItemSelectedListener true
                 }
+
                 R.id.history -> {
                     // Navigate to the HistoryActivity
                     startActivity(Intent(this, History::class.java))
                     return@setOnNavigationItemSelectedListener true
                 }
+
                 R.id.account -> {
                     // Navigate to the AccountActivity
                     startActivity(Intent(this, Account::class.java))
                     return@setOnNavigationItemSelectedListener true
                 }
+
                 else -> false
             }
         }

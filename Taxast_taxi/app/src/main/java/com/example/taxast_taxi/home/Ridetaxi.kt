@@ -87,6 +87,8 @@ class Ridetaxi : AppCompatActivity() {
                         val intent = Intent(this, Confirmpayment::class.java)
                         intent.putExtra("travel", travel)
                         intent.putExtra("pickd", pickd)
+                        intent.putExtra("name",name)
+                        intent.putExtra("dni",dni)
                         startActivity(intent)
                     } else {
                         travel = Travel(
@@ -104,6 +106,9 @@ class Ridetaxi : AppCompatActivity() {
                         val intent = Intent(this, Confirmpayment::class.java)
                         intent.putExtra("travel", travel)
                         intent.putExtra("pickd", pickd)
+                        intent.putExtra("name",name)
+                        intent.putExtra("dni",dni)
+
                         startActivity(intent)
                     }
                 } else {

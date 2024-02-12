@@ -1,0 +1,77 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(255, 240, 211);
+}
+section {
+  flex: 1;
+  padding: 0 40px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 30px;
+}
+input {
+  font-size: 16px;
+  padding: 10px;
+  width: 400px;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+input[type="file"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.file label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  color: #8c939d;
+  border: 1px dashed;
+  font-size: 60px;
+  font-weight: 200;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row > div {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+button {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(251, 168, 168);
+  color: #080808;
+  border-width: 0;
+  border-radius: 10px;
+  font-weight: bold;
+}
+textarea {
+  width: 400px;
+  padding: 10px;
+  border-style: dashed;
+  border-width: 1px;
+  resize: none;
+}
+label {
+  white-space: nowrap;
+}

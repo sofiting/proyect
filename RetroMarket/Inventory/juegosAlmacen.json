@@ -1,0 +1,172 @@
+{
+  "lista_juego": [
+    {
+      "id": 1,
+      "title": "Golden Axe",
+      "price": 10.24,
+      "image": "../imagenes/imagenes/top/t1.jpg",
+      "text": "",
+      "type": 1
+    },
+    {
+      "id": 2,
+      "title": "Sonic & Knuckles",
+      "price": 9.41,
+      "image": "../imagenes/imagenes/top/t2.jpg",
+      "text": "",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "title": "Flappy Bird",
+      "price": 8.67,
+      "image": "../imagenes/imagenes/top/t3.jpg",
+      "text": "",
+      "type": 1
+    },
+    {
+      "id": 22,
+      "title": "Baldur's Gate",
+      "price": 9.99,
+      "image": "../../imagenes/imagenes/juegos modernos/m1.jpg",
+      "text": "Desde su salida al mercado en 1998, Baldur's Gate ha divertido a millones de fans de todo el planeta y ha recibido incontables premios. Desde entonces, esta saga clásica de misterio, intriga y aventura ha sentado las bases de los juegos de rol de ordenador basados en Dungeons & Dragons.",
+      "type": 2
+    },
+    {
+      "id": 23,
+      "title": "Diablo",
+      "price": 42.99,
+      "image": "../../imagenes/imagenes/juegos modernos/m2.jpg",
+      "text": "Diablo, el Señor del Terror, ha caído ante un valiente héroe en las profundas catacumbas de Tristán. Pero ahora que el héroe se ha marchado, un Nómada de la Oscuridad lo ha reemplazado y vaga por el mundo de Santuario, dejando sólo muerte y destrucción a su paso.",
+      "type": 2
+    },
+    {
+      "id": 24,
+      "title": "The Witcher 3: Wild Hunt",
+      "price": 10.99,
+      "image": "../../imagenes/imagenes/juegos modernos/m3.jpg",
+      "text": "The Witcher: Wild Hunt es un juego de rol de mundo abierto de nueva generación con una apasionante trama, ambientado en un espectacular universo de fantasía lleno de decisiones trascendentales y consecuencias impactantes.",
+      "type": 2
+    },
+    {
+      "id": 25,
+      "title": "Call of Duty: Modern Warfare",
+      "price": 34.51,
+      "image": "../../imagenes/imagenes/juegos modernos/m4.jpg",
+      "text": "Call of Duty: Modern Warfare II transporta a los jugadores a un conflicto global sin precedentes y trae de vuelta los icónicos Operadores de la fuerza Operativa 141. Infinity Ward trae a los fans una jugabilidad de última generación etc.",
+      "type": 3
+    },
+    {
+      "id": 26,
+      "title": "Elden Ring",
+      "price": 26.65,
+      "image": "../../imagenes/imagenes/juegos modernos/m5.jpg",
+      "text": " Elden Ring para PC es un RPG de acción (ARPG) escrito por las superestrellas George RR Martin (el autor de la serie de libros Song of Ice and Fire que engendró la serie de televisión Game of Thrones) y Hidetaka Miyazaki.",
+      "type": 3
+    },
+    {
+      "id": 27,
+      "title": "Monster Hunter: World - Iceborne",
+      "price": 14.71,
+      "image": "../../imagenes/imagenes/juegos modernos/m6.jpg",
+      "text": "¡Bienvenidos a un nuevo mundo! Conviértete en un gran cazador y acaba con feroces monstruos en un ecosistema lleno de vida donde podrás aprovechar tu entorno y su variada flora y fauna para vencer.",
+      "type": 3
+    },
+    {
+      "id": 28,
+      "title": "The Legend of Zelda",
+      "price": 60.09,
+      "image": "../../imagenes/imagenes/juegos novedad/n1.jpg",
+      "text": "The Legend of Zelda: Tears of the Kingdom para Nintendo Switch. Crea tu propia aventura en este mundo donde el límite es tu imaginación. En Breath of the Wild, tú decidirás qué camino seguir a lo largo de los inmensos paisajes de Hyrule y las misteriosas islas que flotan en el cielo.",
+      "type": 4
+    },
+    {
+      "id": 29,
+      "title": "Marvel's Spider-Man",
+      "price": 23.96,
+      "image": "../../imagenes/imagenes/juegos novedad/n2.jpg",
+      "text": "Marvel's Spider-Man, con una jugabilidad en tercera persona, asumes el personaje del hombre araña, Spider-Man, lidiando con la vida personal de Peter Parker, así como luchando contra el villano superhumano Míster Negativo en su intento de apoderarse de los bajos fondos de Nueva York.",
+      "type": 4
+    },
+    {
+      "id": 30,
+      "title": "Lords of the Fallen",
+      "price": 33.49,
+      "image": "../../imagenes/imagenes/juegos novedad/n3.jpg",
+      "text": "Lords of the Fallen, el juego se juega con el punto de vista en tercera persona. Acerca del Juego Empezarás creando y personalizando tu avatar, eligiendo entre varias clases de personajes. Hay dos mundos o reinos superpuestos: el de los vivos y el de los muertos.",
+      "type": 4
+    },
+    {
+      "id": 31,
+      "title": "Starfield",
+      "price": 39.89,
+      "image": "../../imagenes/imagenes/juegos novedad/n5.jpg",
+      "text": "Starfield es un juego de PC, se puede jugar desde una perspectiva en primera o tercera persona. Según los desarrolladores del juego, esperan que este sea el comienzo de una gran franquicia, similar a las dos series mencionadas anteriormente.",
+      "type": 5
+    },
+    {
+      "id": 32,
+      "title": "Wo Long",
+      "price": 28.02,
+      "image": "../../imagenes/imagenes/juegos novedad/n6.jpg",
+      "text": "Desde las profundidades de la oscuridad, un dragón se alza. En los Tres Reinos hecho por Team NINJA, creadores de Nioh. Año 184, finales de la dinastía Han en China. La tierra está sumida en el caos y la destrucción. Tras años de prosperidad, la dinastía imperial está a punto de caer",
+      "type": 5
+    },
+    {
+      "id": 33,
+      "title": "Rogue Trader Voidfarer",
+      "price": 65.62,
+      "image": "../../imagenes/imagenes/juegos novedad/n7.jpg",
+      "text": "Rogue Trader Pase de temporada Consigue tanto Sombras del vacío como Lex Imperialis, las dos grandes expansiones de historia con montones de contenido adicional programadas para 2024. Completar cada DLC te llevará unas 15 horas. Libro de arte digital ¡Descubre la belleza de la Extensión de Koronus con este libro de arte",
+      "type": 5
+    },
+    {
+      "id": 34,
+      "title": "Super Mario - All stars",
+      "price": 7.99,
+      "image": "../../imagenes/imagenes/juegos retro/r7.jpg",
+      "text": "Super Mario 3D All-Starsa​ es una recopilación de juegos de plataformas de 2020 para Nintendo Switch. Conmemora el 35 aniversario de la franquicia Super Mario de Nintendo, con ports de alta definición de Super Mario 64 (1996), Super Mario Sunshine (2002) y Super Mario Galaxy (2007).",
+      "type": 6
+    },
+    {
+      "id": 35,
+      "title": "Pokémon",
+      "price": 10.99,
+      "image": "../../imagenes/imagenes/juegos retro/r2.jpg",
+      "text": "Los juegos Pokémon donde los jugadores capturan, entrenan y luchan con criaturas llamadas Pokémon. El objetivo es ganar batallas, obtener insignias y completar la Pokédex. La serie ha sido popular desde los años 90 y ha tenido un gran impacto en la cultura popular.",
+      "type": 6
+    },
+    {
+      "id": 36,
+      "title": "Sonic & Knuckles",
+      "price": 9.41,
+      "image": "../../imagenes/imagenes/juegos retro/r3.jpg",
+      "text": "Super Metroid es un juego de acción y aventuras de desplazamiento lateral en 2D, que tiene lugar principalmente en el planeta ficticio Zebes del juego original: un mundo grande y abierto con áreas conectadas por puertas y ascensores.",
+      "type": 6
+    },
+    {
+      "id": 37,
+      "title": "Gold Runner",
+      "price": 14.61,
+      "image": "../../imagenes/imagenes/juegos retro/r8.jpg",
+      "text": "¡Juego retro Gold Runner! ¿Te gustan los juegos retro? ¡Te encantará este juego similar a Lode Runner de juegos arcade muy antiguos! ¡Compra para tener este juego arcade con 37 niveles en total!",
+      "type": 7
+    },
+    {
+      "id": 38,
+      "title": "Batallas de torres",
+      "price": 9.41,
+      "image": "../../imagenes/imagenes/juegos retro/r9.jpg",
+      "text": "Lleve a sus guerreros y guardianes para defender su castillo, mazmorras y torres de los ennemies de pícaros. Retro Defenders: Towers War es un juego épico y clásico de RPG con estilo gráfico de Pixel Arts. Todo lo que tienes que hacer es usar tus tropas para derrotar a los pícaros y salvar las mazmorras.",
+      "type": 7
+    },
+    {
+      "id": 39,
+      "title": "Cuartel de tanques",
+      "price": 9.41,
+      "image": "../../imagenes/imagenes/juegos retro/r10.jpg",
+      "text": "Hay 12 niveles que puedes superar en modo fácil o difícil. Juego simple en el que solo necesitas seleccionar tu modo y tocar para disparar al objetivo más cercano, por ejemplo, torreta y tanques enemigos entrantes.",
+      "type": 7
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Market</title>
+    <link rel="stylesheet" href="addInventory.css" />
+    <link rel="stylesheet" href="../General/General.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="../imagenes/imagenes/logo/logo.png" alt="logo" class="logo" />
+      <h1>Retro Market</h1>
+      <div class="otro">
+        <a href="../Compra/Compra.html" style="color: black" class="carrito"
+          ><i class="bi bi-cart4"></i>
+        </a>
+        <div class="cantidad_producto"><span id="cantidad"></span></div>
+        <a href="../Login/Login.html" style="color: black" class="cuenta"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a
+          href="../Inventory/Inventory.html"
+          style="color: black"
+          class="almacen"
+          ><i class="bi bi-box-seam"></i
+        ></a>
+      </div>
+    </header>
+    <section>
+      <div class="row">
+        <label for="title">Nombre：</label>
+        <div>
+          <input
+            type="text"
+            id="title"
+            placeholder="Introduce nombre del juego"
+            onchange="getValue(event)"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <label for="price">Precio：</label>
+        <div>
+          <input
+            type="text"
+            id="price"
+            placeholder="Precio"
+            onchange="getValue(event)"
+            style="width: 80px"
+          />
+          <label for="type" style="margin-left: 20px">Categoría：</label>
+          <div>
+            <input
+              type="text"
+              id="type"
+              placeholder="Categoría"
+              onchange="getValue(event)"
+              style="width: 80px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row" style="align-items: flex-start">
+        <label for="text">Introducción：</label>
+        <div>
+          <textarea
+            type="text"
+            id="text"
+            cols="30"
+            rows="8"
+            placeholder="Introduce descripcción del juego"
+            onchange="getValue(event)"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="file">
+        <label for="file" id="file_img">+</label>
+        <input type="file" id="file" onchange="openFile(event)" />
+      </div>
+      <div class="done">
+        <button onclick="addData()">Confirmar</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../imagenes/imagenes/logo/logo.png" alt="Tu Logo" />
+            <p class="compania">Retro Market</p>
+          </div>
+          <div class="footer-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle sol 23</p>
+            <p>Email: retromarket@gmail.com</p>
+            <p>Teléfono: +34 623 789 123</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/productos">Productos</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul>
+              <li>
+                <a href="https://es-es.facebook.com/" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/en/" target="_blank">Tiktok</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2024 Retro Market Web. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+  <!-- Si tuviera tiempo podería hacer sacar como un fichero JS aparte-->
+  <script>
+    const Data = {
+      id: 0,
+      title: "",
+      price: "",
+      image: "",
+      text: "",
+      type: 7,
+    };
+    // 给input写一个onchange事件，写一个共用即可
+    function getValue(event) {
+      // 获取输入框值
+      const value = event.target.value;
+      // 获取输入框ID就是数据的属性
+      const attr = event.target.id;
+      // 修改data值
+      Data[attr] = value;
+      // 价格转浮点型
+      if (attr == "price") Data[attr] = Number(value) || 0;
+    }
+    // 打开文件获取文件路径
+    function openFile(event) {
+      Data.image = event.target.value;
+      console.log(Data.image);
+      document.querySelector("#file_img").style.backgroundImage =
+        "url('" + event.target.value + "')";
+    }
+    // 添加到本地存储
+    function addData() {
+      let goodsList = localStorage.getItem("Inventory") || "[]";
+      goodsList = JSON.parse(goodsList);
+      Data.id = 100 + goodsList.length + 1;
+      // 判断数据真实性
+      for (const key in Data) {
+        if (!Data[key]) return alert("Introduce" + key);
+      }
+      goodsList.push(Data);
+      // 存储到本地
+      localStorage.setItem("Inventory", JSON.stringify(goodsList));
+      alert("Has añadido un juego！");
+      window.close();
+    }
+  </script>
+</html>

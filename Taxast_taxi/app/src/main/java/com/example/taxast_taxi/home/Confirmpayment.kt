@@ -27,7 +27,10 @@ class Confirmpayment : AppCompatActivity() {
             onBackPressed()
         }
         val pickd = intent.getStringExtra("pickd")
-        binding.pickd.text = pickd
+        binding.pickd.text = pickd.toString()
+
+        val name = intent.getStringExtra("name");
+        val dni = intent.getStringExtra("dni")
 
         val travel = intent.getParcelableExtra<Travel>("travel")
 
@@ -51,6 +54,8 @@ class Confirmpayment : AppCompatActivity() {
 
             binding.confirmPay.setOnClickListener {
                  val intent = Intent(this,SuccessPayment::class.java)
+                intent.putExtra("name",name)
+                intent.putExtra("dni",dni)
                 startActivity(intent)
             }
         }

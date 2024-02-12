@@ -185,7 +185,7 @@
                 android:id="@+id/pickupd"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:text="TextView"
+                android:text="calle sol 23"
                 android:textSize="24sp"/>
         </LinearLayout>
 

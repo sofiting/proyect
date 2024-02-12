@@ -2,11 +2,13 @@ package com.example.taxast_taxi.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.taxast_taxi.R
+import com.example.taxast_taxi.account.Account
 import com.example.taxast_taxi.databinding.ActivityHomeBinding
 import com.example.taxast_taxi.history.History
 import com.example.taxast_taxi.menu.Favourite
@@ -38,9 +40,11 @@ class Home : AppCompatActivity() {
 
         val name = intent.getStringExtra("name");
         binding.username.setText("Hi ! "+ name)
+       // binding.username.setText("Welcome to Taxast ! ")
         val dni = intent.getStringExtra("dni")
 
-
+        Log.d("sara",name.toString())
+        Log.d("sara",dni.toString())
 
         binding.taxi.setOnClickListener {
             val intent = Intent(this, Ridetaxi::class.java)

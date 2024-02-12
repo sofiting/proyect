@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f7f7f7;
+    }
+    section{
+        flex: 1;
+        padding: 0 40px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+        font-size: 16px;
+        padding: 10px;
+        width: 400px;
+        border-style: dashed;
+        border-width: 1px;
+    }
+    footer{
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f7f7f7;
+    }
+    input[type="file"]{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    .file label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        color: #8c939d;
+        border: 1px dashed ;
+        font-size: 60px;
+        font-weight: 200;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .row>div{
+        display: flex;
+        align-items: center;
+        width: 400px;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        background-color: red;
+        color: #fff;
+        border-width: 0;
+        border-radius: 10px;
+    }
+    textarea{
+        width: 400px;
+        padding: 10px;
+        border-style: dashed;
+        border-width: 1px;
+        resize: none;
+    }
+    label{
+        white-space: nowrap;
+    }
+</style>
+<body>
+    <header>
+        页面头部
+    </header>
+    <section>
+        <div class="row">
+            <label for="title">标题：</label>
+            <div><input type="text" id="title" placeholder="请输入标题" onchange="getValue(event)"></div>
+        </div>
+        <div class="row">
+            <label for="price">价格：</label>
+            <div>
+                <input type="text" id="price" placeholder="请输入价格" onchange="getValue(event)" style="width: 80px;" >
+                <label for="type" style="margin-left: 20px;">类型：</label>
+                <div><input type="text" id="type" placeholder="请输入类型" onchange="getValue(event)" style="width: 80px;"></div>
+            </div>
+        </div>
+        <div class="row" style="align-items: flex-start;">
+            <label for="text">介绍：</label>
+            <div>
+                <textarea type="text" id="text" cols="30" rows="8" placeholder="请输入介绍" onchange="getValue(event)"></textarea>
+            </div>
+        </div>
+        
+        <div class="file">
+            <label for="file" id="file_img">+</label>
+            <input type="file" id="file" onchange="openFile(event)">
+        </div>
+        <div class="done">
+            <button onclick="addData()">确定修改</button>
+        </div>
+    </section>
+    <footer>
+        页面底部
+    </footer>
+</body>
+<script>
+
+// 获取要修改的商品ID
+var url = window.location.href;
+var goodsid = url.match(/(\d+)$/)[0];
+// 根据ID筛选出数据
+const list = JSON.parse(localStorage.getItem('Inventory'))
+const Data = list.find(item=>item.id===parseInt(goodsid))
+// 渲染数据
+for (const key in Data) {
+    const dom = document.querySelector('#'+key+'[type="text"]')
+    if(dom) dom.value = Data[key]
+}
+
+    // 给input写一个onchange事件，写一个共用即可 
+    function getValue(event){
+        // 获取输入框值
+        const value = event.target.value
+        // 获取输入框ID就是数据的属性
+        const attr = event.target.id
+        // 修改data值
+        Data[attr] = value
+        // 价格转浮点型
+        if(attr=='price') Data[attr] = Number(value)||0
+    }
+    // 打开文件获取文件路径
+    function openFile(event){
+        Data.image = event.target.value;
+        console.log(Data.image );
+        document.querySelector('#file_img').style.backgroundImage="url('"+event.target.value+"')"
+    }
+    // 添加到本地存储
+    function addData(){
+        let goodsList = localStorage.getItem('Inventory')||"[]"
+        goodsList = JSON.parse(goodsList)
+        // 判断数据真实性
+        for (const key in Data) {
+            if(!Data[key]) return alert('请输入'+key)
+        }
+        const index  = goodsList.findIndex(item=>item.id===Data.id)
+        goodsList[index] = Data
+        // 存储到本地
+        localStorage.setItem('Inventory',JSON.stringify(goodsList))
+        alert('修改成功！')
+        window.close();
+    }
+</script>
+</html>
